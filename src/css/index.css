@@ -1,0 +1,115 @@
+@import url("components/Header.css");
+@import url("components/Banner.css");
+@import url("components/Info.css");
+@import url("components/Product.css");
+@import url("components/Video.css");
+@import url("components/Quote.css");
+@import url("components/Footer.css");
+@import url("components/BurgerWindow.css");
+@import url("components/BurgerButton.css");
+@import url("components/Slider.css");
+
+
+
+
+@import url("./text.css");
+
+:root {
+    --blue: #1617DB;
+    --black: #01010D;
+    --black__blue: #3A3F55;
+    --stroke__gray: #CCCCCC;
+    --gray: #01010D;
+    --siren: #6565EC;
+    --burgerWidth: 30px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: inherit;
+    border: 0;
+    border-radius: 0;
+    line-height: 1.2;
+    outline: 0;
+}
+
+section {
+    margin-top: 100px;
+}
+
+section, header, footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .container {
+        width: 1186px;
+    }
+    @media (max-width: 1220px) {
+        .container {
+            width: 92.5% !important;
+        }
+    }
+}
+
+button {
+    white-space: nowrap;
+}
+
+
+.start {
+    background: var(--blue);
+    border-radius: 6px;
+    white-space: nowrap;
+
+    padding: 15px 30px;
+    color: white;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.gallery {
+    cursor: pointer;
+    padding: 15px 30px;
+    white-space: nowrap;
+
+    display: flex;
+    gap: 10px;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--siren);
+    border-radius: 6px;
+    border: 1px solid rgba(22, 23, 219, .2);
+}
+
+.play__video {
+    padding: 15px 30px;
+    display: flex;
+    white-space: nowrap;
+
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: var(--blue);
+    font-weight: 500;
+    width: fit-content;
+    cursor: pointer;
+    .img {
+        width: 30px;
+        display: flex;
+        justify-content: center;
+        aspect-ratio: 1 / 1;
+        width: 14px;
+    }
+}

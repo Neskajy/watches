@@ -1,0 +1,60 @@
+.quote__section {
+    display: flex;
+    align-items: center;
+    .container {
+        .quote {
+            max-width: 700px;
+            position: relative;
+            margin: 45px 70px;
+            flex-direction: column;
+            display: flex;
+            gap: 30px;
+            @media (max-width: 600px) {
+                margin: 10px 20px;
+            }
+            p {
+                max-width: 556px;
+            }
+            .author {
+                display: flex;
+                gap: 10px;
+                .name {
+                    display: flex;
+                    gap: 5px;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    .real__name {
+                        font-size: 16px;
+                        font-weight: 600;
+                    }
+                    .initials {
+                        color: #01010D;
+                        font-size: 14px;
+                    }
+                    .quotes {
+                        display: flex;
+                        gap: 14px;
+                    }
+                }
+                .avatar {
+                    width: 50px;
+                    aspect-ratio: 1 / 1;
+                    img {
+                        width: 100%;
+                        aspect-ratio: 1 / 1;
+                    }
+                }
+            }
+            .quotes {
+                bottom: 0;
+                left: calc(66% - 140px);
+                transform: translateX(-50%);
+                position: absolute;
+                img {
+                    opacity: .2;
+                }
+            }
+            
+        }
+    }
+}

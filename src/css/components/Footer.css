@@ -1,0 +1,73 @@
+.footer__section {
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 120px;
+    .container {
+        .cols {
+            display: grid;
+            width: 100%;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            grid-gap: 130px;
+            .col {
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 24px;
+                    li {
+                        cursor: pointer;
+                        font-size: 16px;
+                        &.active {
+                            font-weight: 600;
+                        }
+                    }
+                }
+                &.social {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0;
+                    .logo {
+                        font-weight: 600;
+                        font-size: 18px;
+                    }
+                    p {
+                        margin-top: 20px;
+                        margin-bottom: 25px;
+                    }
+                    .social__icons {
+                        display: flex;
+                        gap: 30px;
+                    }
+                }
+                &.subscribe {
+                    form {
+                        border-radius: 6px;
+                        input {
+                            color: #01010D;
+                            border-radius: 6px;
+                            padding: 10px 0px;
+                            padding-left: 18px;
+                            width: 100%;
+                            &::placeholder {
+                                color: #01010D;
+                                opacity: .5;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .footer__section {
+        .container {
+            .cols {
+                flex-direction: column;
+                gap: 50px;
+            }
+        }
+    }
+}

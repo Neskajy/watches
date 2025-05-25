@@ -1,0 +1,80 @@
+.info__section {
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+    .container {
+        width: 1056px;
+        position: relative;
+        .heading {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            gap: 25px;
+            flex-direction: column;
+            h2 {
+                text-align: left;
+            }
+            p {
+                max-width: 433px;
+                width: 100%;
+                text-align: center;
+                font-size: 16px;
+                @media (max-width: 550px) {
+                    text-align: left;
+                }
+            }
+        }
+        .info {
+            display: flex;
+            justify-content: space-between;
+            
+            .col {
+                display: flex;
+                flex-direction: column;
+                gap: 70px;
+                .info__block {
+                    max-width: 162px;
+                    height: 230px;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    .img {
+                        width: 100%;
+                        aspect-ratio: 1 / 1;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    
+                    .text {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 10px;
+                        h3 {
+
+                        }
+                        p {
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+        .background {
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%) translateX(-50%);
+            left: 50%;
+        }
+        @media (max-width: 1000px) {
+            .background {
+                img {
+                    width: 60%;
+                }
+            }
+        }
+    }
+}

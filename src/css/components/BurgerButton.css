@@ -1,0 +1,52 @@
+.burger__button {
+    cursor: pointer;
+    aspect-ratio: 1 / 1;
+    width: var(--burgerWidth);
+    background: transparent;
+
+
+    .inner {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        background: transparent;
+
+        div {
+            position: absolute;
+            width: 100%;
+            transition: .3s all ease-in-out;
+            height: 2px;
+            background: black;
+        }
+
+        .top {
+            top: calc(var(--burgerWidth) / 6);
+            transform-origin: left top;
+        }
+
+        .center {
+            top: calc(var(--burgerWidth) / 2);
+        }
+
+        .bottom {
+            top: calc(5 * var(--burgerWidth) / 6);
+            transform-origin: left bottom;
+        }
+    }
+
+    &.active {
+        .inner {
+            .top {
+                transform: rotate(45deg);
+            }
+
+            .center {
+                opacity: 0;
+            }
+
+            .bottom {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}
