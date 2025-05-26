@@ -7,7 +7,7 @@
     .container {
         display: flex;
         position: absolute;
-        top: 50%;
+        top: calc(50% + 50px);
         gap: 5%;
         transform: translateY(-50%);
         .text {
@@ -48,9 +48,11 @@
         right: 0;
         bottom: 0;
         width: 100vw;
+        height: 100vh;
         object-fit: cover;
         .background__img {
             width: 100%;
+            height: 100vh;
         }
         .watches {
             position: absolute;
@@ -65,8 +67,8 @@
 }
 @media (max-width: 1350px) {
     .banner__section {
-        margin-top: 100px;
         .container {
+            top: calc(50% + 200px);
             flex-direction: column;
             align-items: flex-start !important;
             .hero__img {
@@ -74,6 +76,26 @@
                 position: static;
                 max-width: 700px;
             }
+        }
+        .background {
+            position: relative;
+            .watches {
+                position: absolute;
+                top: 0;
+                left: -30%;
+                transform: rotate(0deg);
+                opacity: .15;
+                max-width: 1000px;
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .banner__section {
+        .container {
+            top: calc(50% + 150px);
         }
     }
 }

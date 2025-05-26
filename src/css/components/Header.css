@@ -1,6 +1,6 @@
 .header__section {
     z-index: 1333;
-    /* position: absolute; */
+    position: absolute;
     padding: 25px 0px;
     .container {
         z-index: 1333;
